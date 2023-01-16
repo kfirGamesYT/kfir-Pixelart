@@ -1,0 +1,86 @@
+/********************************************/
+/**
+* Animation
+***********************************************/
+/**
+ * reticle
+ * Creates an animation of inset box-shadow and outline.
+ * Makes it easier to spot things.
+ */
+@keyframes reticle {
+  0% {
+    box-shadow: inset 0px 0px 2px 2px #f00c0c;
+    outline: 2px solid #fff;
+  }
+  50% {
+    box-shadow: inset 0px 0px 2px 3px lime;
+    outline: 3px solid #fff;
+  }
+  100% {
+    box-shadow: inset 0px 0px 2px 2px yellow;
+    outline: 2px solid #fff;
+  }
+}
+td:hover {
+  animation: 3s infinite alternate reticle;
+}
+
+.pam-label,
+#pam-color-picker,
+#pam-border--color,
+td {
+  cursor: pointer;
+}
+
+#pam-color-picker,
+#pam-border--color {
+  padding: 0;
+}
+
+/********************************************/
+/**
+*  HTML Elements
+***********************************************/
+body {
+  padding-top: 90px;
+}
+
+table,
+tr,
+td {
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid #4db6ac;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+}
+/********************************************/
+/**
+*  ID
+***********************************************/
+#pam-color-picker {
+  width: 40px;
+  height: 35px;
+}
+
+/********************************************/
+/**
+*  Classes
+***********************************************/
+.pam-help {
+  cursor: help;
+}
+.pam-main {
+  margin: 1em auto;
+}
+.pam-main--size-picker {
+  margin-bottom: 1em;
+}
